@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather App by JP</title>
+    <link rel="stylesheet" href = "/static/styles.css">
+</head>
+<body>
+    <h1>Weather App by James</h1>
+    <div class = "input-selection">
+        <input id = "cityInput" type = "text" placeholder = "Enter the city name">
+        <button id = "searchBtn">Find</button>
+    </div>
+
+    <h2 id = "cityHeader"></h2>
+
+    <div id="buttonsContainer" class="hidden">
+        <button class="info-button" data-type="temperature">Temperature</button>
+        <button class="info-button" data-type="description">Description</button>
+        <button class="info-button" data-type="feels_like">Feels like</button>
+        <button class="info-button" data-type="humidity">Humidity</button>
+    </div>
+
+    <div id = "result"></div>
+    <script src="/static/script.js"></script>
+    
+</body>
+</html>

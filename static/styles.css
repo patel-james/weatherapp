@@ -1,0 +1,44 @@
+body{
+    font-family: Arial, sans-serif;
+    background-color: #e5f3ff;
+    padding: 40px;
+    text-align: center;
+}
+
+.input-section{
+    margin-bottom: 20px;
+}
+
+#cityInput {
+    padding: 10px;
+    width: 250px;
+    margin-right: 5px;
+}
+
+button {
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+#buttonsContainer {
+    margin-top: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.info-btn {
+    padding: 12px 20px;
+    margin: 10px;
+    border: 1px solid #aaa;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
