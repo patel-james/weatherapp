@@ -2,12 +2,14 @@ __pycache__/
 *.pyc
 
 venv/
-
 .env
-
-.pyteste_cache/
+.pytest_cache/
+.DS_Store
 
 .dockerignore
 
-.DS_Store
-
+# Ignore Terraform-generated files ONLY
+terraform/.terraform/
+terraform/.terraform.lock.hcl
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup

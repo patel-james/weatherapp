@@ -1,44 +1,172 @@
-body{
-    font-family: Arial, sans-serif;
-    background-color: #e5f3ff;
-    padding: 40px;
-    text-align: center;
+/* -------- RESET STYLES -------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.input-section{
-    margin-bottom: 20px;
+/* -------- GLOBAL PAGE -------- */
+body {
+    font-family: "Poppins", Arial, sans-serif;
+    background: linear-gradient(135deg, #cfe9ff, #e6f4ff);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 60px;
+}
+
+/* -------- MAIN WRAPPER -------- */
+.app-container {
+    width: 90%;
+    max-width: 600px;
+    background: white;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.12);
+    text-align: center;
+    border: 1px solid #dbe7f4;
+    animation: fadeIn 0.8s ease;
+}
+
+/* -------- HEADING -------- */
+h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    color: #023e8a;
+    letter-spacing: 0.5px;
+}
+
+/* -------- SEARCH BAR SECTION -------- */
+.input-selection {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 25px;
 }
 
 #cityInput {
-    padding: 10px;
-    width: 250px;
-    margin-right: 5px;
+    width: 300px;
+    padding: 12px 15px;
+    border-radius: 10px;
+    border: 1px solid #b0c7de;
+    font-size: 16px;
+    outline: none;
+    transition: 0.2s;
 }
 
-button {
-    padding: 10px 15px;
+#cityInput:focus {
+    border-color: #0077b6;
+    box-shadow: 0 0 6px rgba(0,119,182,0.4);
+}
+
+/* -------- SEARCH BUTTON -------- */
+#searchBtn {
+    padding: 12px 20px;
+    font-size: 16px;
+    background: #0077b6;
+    color: white;
+    border-radius: 10px;
+    border: none;
     cursor: pointer;
+    transition: 0.25s;
 }
 
+#searchBtn:hover {
+    background: #0096c7;
+    transform: translateY(-2px);
+}
+
+#searchBtn:active {
+    transform: scale(0.95);
+}
+
+/* -------- CITY NAME -------- */
+#cityHeader {
+    font-size: 22px;
+    margin-bottom: 25px;
+    color: #03045e;
+}
+
+/* -------- INFO BUTTONS -------- */
 #buttonsContainer {
-    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 35px;
+    opacity: 1;
+    transition: opacity 0.5s ease;
 }
 
 .hidden {
-    display: none;
+    opacity: 0;
+    pointer-events: none;
 }
 
-.info-btn {
-    padding: 12px 20px;
-    margin: 10px;
-    border: 1px solid #aaa;
-    background-color: #f1f1f1;
-    cursor: pointer;
+.info-button {
+    padding: 15px 22px;
+    border-radius: 12px;
+    background: #f8f9fb;
+    border: 1px solid #cdd6e0;
     font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 140px;
+    text-align: center;
+    font-weight: 500;
+    color: #023047;
 }
 
+.info-button:hover {
+    background: #e3f2ff;
+    border-color: #0077b6;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 14px rgba(0, 119, 182, 0.2);
+}
+
+.info-button:active {
+    transform: scale(0.95);
+}
+
+/* -------- RESULT OUTPUT -------- */
 #result {
-    margin-top: 20px;
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 24px;
+    font-weight: 600;
+    color: #03045e;
+
+    padding: 20px;
+    border-radius: 14px;
+    background: #f0f7ff;
+    border: 1px solid #c1d8f0;
+
+    animation: fadeInUp 0.7s ease;
+    min-height: 50px;
+}
+
+/* -------- ANIMATIONS -------- */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+    0% { opacity: 0; transform: translateY(12px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* -------- RESPONSIVE -------- */
+@media (max-width: 480px) {
+    .app-container {
+        padding: 25px;
+    }
+
+    #cityInput {
+        width: 200px;
+    }
+
+    .info-button {
+        width: 120px;
+    }
 }

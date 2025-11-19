@@ -32,13 +32,13 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
       
     - name: Build Docker Image
-      run: docker build -t pateljames/weatherapp:v1 .
+      run: docker build -t pateljames/weatherapp:v2 .
 
     - name: Push Docker Image
-      run: docker push pateljames/weatherapp:v1
+      run: docker push pateljames/weatherapp:v2
 
     - name: Tag Docker Image as latest
-      run: docker tag pateljames/weatherapp:v1 pateljames/weatherapp:latest
+      run: docker tag pateljames/weatherapp:v2 pateljames/weatherapp:latest
 
     - name: Push latest Docker Image
       run: docker push pateljames/weatherapp:latest
